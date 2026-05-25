@@ -73,6 +73,21 @@ print(result.tables)        # Extracted tables
 print(result.images)        # Extracted images
 ```
 
+### Personal Usage Notes
+
+For research paper extraction I've found the following snippet useful — it batches a directory of PDFs and writes each result to a corresponding `.md` file:
+
+```python
+from pathlib import Path
+from mineru.api import parse_pdf
+
+for pdf_path in Path("papers/").glob("*.pdf"):
+    result = parse_pdf(str(pdf_path))
+    out_path = Path("output") / pdf_path.with_suffix(".md").name
+    out_path.write_text(result.markdown)
+    print(f"Done: {pdf_path.name}")
+```
+
 ## Documentation
 
 Full documentation is available at [https://mineru.readthedocs.io](https://mineru.readthedocs.io)
@@ -93,9 +108,4 @@ We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) 
 
 ## License
 
-This project is licensed under the AGPL-3.0 License — see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-- Original project: [opendatalab/MinerU](https://github.com/opendatalab/MinerU)
-- 
+This project is licensed under the AGPL-3.0 License — 
