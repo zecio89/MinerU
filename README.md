@@ -7,6 +7,8 @@ A powerful tool for extracting and processing content from PDF documents and oth
 [![License](https://img.shields.io/github/license/opendatalab/MinerU)](LICENSE)
 [![CI](https://github.com/opendatalab/MinerU/actions/workflows/python-package.yml/badge.svg)](https://github.com/opendatalab/MinerU/actions/workflows/python-package.yml)
 
+> **Personal fork** — I'm using this for extracting content from research papers. Notes and experiments may appear in the `experiments/` directory.
+
 ## Overview
 
 MinerU is an open-source document parsing and extraction tool that converts PDFs and other document formats into structured, machine-readable content. It leverages advanced layout analysis and OCR capabilities to accurately extract text, tables, figures, and formulas.
@@ -96,17 +98,4 @@ This project is licensed under the AGPL-3.0 License — see the [LICENSE](LICENS
 ## Acknowledgements
 
 - Original project: [opendatalab/MinerU](https://github.com/opendatalab/MinerU)
-- Thanks to all contributors and the open-source community
-
-## Citation
-
-If you use MinerU in your research, please cite:
-
-```bibtex
-@misc{mineru2024,
-  title={MinerU: A One-stop Open-source High-quality Information Extraction Tool},
-  author={OpenDataLab},
-  year={2024},
-  url={https://github.com/opendatalab/MinerU}
-}
-```
+- 
