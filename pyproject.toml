@@ -78,13 +78,13 @@ where = ["src"]
 include = ["mineru*"]
 
 [tool.black]
-line-length = 120
+line-length = 88  # personal preference: use black's default line length instead of 120
 target-version = ["py39", "py310", "py311", "py312"]
 include = '\.pyi?$'
 
 [tool.isort]
 profile = "black"
-line_length = 120
+line_length = 88  # keep in sync with black
 
 [tool.mypy]
 python_version = "3.9"
