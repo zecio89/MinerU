@@ -81,21 +81,19 @@ For research paper extraction I've found the following snippet useful — it bat
 from pathlib import Path
 from mineru.api import parse_pdf
 
-for pdf_path in Path("papers/").glob("*.pdf"):
+# Make sure the output directory exists before starting the loop
+Path("output").mkdir(parents=True, exist_ok=True)
+
+for pdf_path in sorted(Path("papers/").glob("*.pdf")):
     result = parse_pdf(str(pdf_path))
     out_path = Path("output") / pdf_path.with_suffix(".md").name
     out_path.write_text(result.markdown)
     print(f"Done: {pdf_path.name}")
 ```
 
-> **Note (personal):** On my machine I also need `Path("output").mkdir(exist_ok=True)` before the loop, otherwise the write fails if the directory doesn't exist yet.
+> **Note (personal):** Using `sorted()` on the glob results keeps the processing order consistent across runs, which makes it easier to compare logs.
 
 ## Documentation
 
 Full documentation is available at [https://mineru.readthedocs.io](https://mineru.readthedocs.io)
 
-## Configuration
-
-MinerU can be configured via a YAML configuration file or environment variables. See [Configuration Guide](docs/configuration.md) for details.
-
-## Co
