@@ -88,6 +88,8 @@ for pdf_path in Path("papers/").glob("*.pdf"):
     print(f"Done: {pdf_path.name}")
 ```
 
+> **Note (personal):** On my machine I also need `Path("output").mkdir(exist_ok=True)` before the loop, otherwise the write fails if the directory doesn't exist yet.
+
 ## Documentation
 
 Full documentation is available at [https://mineru.readthedocs.io](https://mineru.readthedocs.io)
@@ -96,16 +98,4 @@ Full documentation is available at [https://mineru.readthedocs.io](https://miner
 
 MinerU can be configured via a YAML configuration file or environment variables. See [Configuration Guide](docs/configuration.md) for details.
 
-## Contributing
-
-We welcome contributions! Please read our [Contributing Guide](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before submitting a pull request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feat/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feat/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the AGPL-3.0 License — 
+## Co
