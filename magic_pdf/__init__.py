@@ -2,6 +2,10 @@
 
 This package provides tools for extracting structured content from PDF files,
 including text, tables, images, and mathematical formulas.
+
+Personal fork notes:
+- Forked for learning purposes and local experimentation
+- Upstream: https://github.com/opendatalab/MinerU
 """
 
 __version__ = "0.1.0"
